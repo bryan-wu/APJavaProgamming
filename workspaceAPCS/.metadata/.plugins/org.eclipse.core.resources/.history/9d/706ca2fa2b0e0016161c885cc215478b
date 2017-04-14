@@ -1,0 +1,60 @@
+package zMine;
+
+public class Player extends Character
+{
+    // X/Y param
+    // speed
+    // x/y vel
+    // health param
+
+    // takeHit()
+    // checkHealth()
+
+
+    /**
+     * @param x
+     *            x velocity
+     * @param y
+     *            y velocity
+     * @param hitPoints
+     *            hitPoints
+     * @param world
+     *            World
+     */
+    public Player( double x, double y, int hitPoints, World world )
+    {
+        super( x, y, hitPoints, world );
+    }
+
+
+    /**
+     * TODO Write your method description here.
+     * 
+     * @return
+     */
+    public boolean alive()
+    {
+        return hp > 0;
+    }
+
+
+    /**
+     * TODO Write your method description here.
+     * 
+     * @param damage
+     *            damage taken
+     * @return
+     */
+    public void takeHit( int damage )
+    {
+        hp = hp - damage;
+        if ( !alive() )
+        {
+            // tell World that Player is dead
+            w.playerDeath( this );
+        }
+    }
+
+
+
+}

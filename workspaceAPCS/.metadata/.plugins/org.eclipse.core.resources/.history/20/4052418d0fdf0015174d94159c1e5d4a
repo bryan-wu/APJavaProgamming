@@ -1,0 +1,79 @@
+/**
+ * Student.java
+ * 
+ * Stores the following information about students grade name (first and last)
+ * Lynbrook id
+ * 
+ */
+public class Student implements Comparable
+{
+    private String lynbrookId;
+
+    private String firstName;
+
+    private String lastName;
+
+    private int grade;
+
+
+    public Student( String id, String fName, String lName, int g )
+    {
+        lynbrookId = id;
+        firstName = fName;
+        lastName = lName;
+        grade = g;
+    }
+
+
+    public Student()
+    {
+        this( "", "", "", 0 );
+    }
+
+
+    /**
+     * TODO Write your method description here.
+     * 
+     * @param obj
+     * @return
+     */
+    public int compareTo( Object obj )
+    {
+        String params[] = obj.toString().split( "\\s+" );   
+        String otherLynbrookId = "";
+        for (String str:params)
+        {
+            if (str.length()==7)
+            {
+                otherLynbrookId=str;
+            }
+        }
+        
+        if (  > Integer.parseInt( obj.toString() ) )
+        {
+            return 1;
+        }
+        if ( grade == Integer.parseInt( obj.toString() ) )
+        {
+            return 0;
+        }
+        if ( grade < Integer.parseInt( obj.toString() ) )
+        {
+            return -1;
+        }
+
+        return -1;
+    }
+
+
+    public Object clone()
+    {
+        return new Student( lynbrookId, firstName, lastName, grade );
+    }
+
+
+    public String toString()
+    {
+        return lynbrookId + " " + firstName + " " + lastName + " " + grade;
+    }
+}

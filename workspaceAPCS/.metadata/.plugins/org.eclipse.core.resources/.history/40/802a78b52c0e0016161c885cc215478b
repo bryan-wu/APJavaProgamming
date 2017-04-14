@@ -1,0 +1,94 @@
+package zMine;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.Timer;
+
+
+public class Tile
+{
+    int xDim;// xlenght of the world
+
+    int yDim;// ylenght of the world
+
+    public double[][] theWorld;// store all our blocks
+
+    ArrayList<Player> thePlayers = new ArrayList<Player>();// store all our
+                                                           // players
+
+    ArrayList<Enemy> theEnemies = new ArrayList<Enemy>();// store all our
+                                                         // enemies
+
+    Timer worldTimer; //our world time, its our animation!
+    /**
+     * @param x
+     *            is the width of the world
+     * @param y
+     *            is the height of the world
+     * @param players
+     *            number of
+     */
+    public Tile( int x, int y, int players )
+    {
+        xDim = x;
+        yDim = y;
+        theWorld = makeWorld(xDim, yDim);       
+    }
+    
+    /**
+     * creates a world, filling our array with blocks
+     * @param x the width
+     * @param y the height
+     * @return a newly random generated world to loot!
+     */
+    public double[][] makeWorld( int x, int y )
+    {
+        //ask nathan
+    }
+    
+    /**
+     * removes a enemy from the list.
+     * @param enemy that needs to be removed
+     */
+    public void enemyDeath(Enemy enemy)
+    {
+        theEnemies.remove( enemy );
+    }
+    /**
+     * removes a player from the list
+     * @param player that needs to be removed
+     */
+    public void playerDeath(Player player)
+    {
+        thePlayers.remove( player );
+    }
+    
+    /**
+     * runs the world's timer to send to the other classes
+     */
+    public void runWorld()
+    {
+        int delay = 10;
+        worldTimer = new Timer(delay, new ActionListener(){
+
+            @Override
+            public void actionPerformed( ActionEvent e )
+            {
+                tick(delay);
+            }
+            
+        });
+    }
+    
+    /**
+     * sends the animation to the other classes
+     * @param fraps from the runWorld
+     */
+    public void tick(int fraps)
+    {
+        
+    }
+    
+}

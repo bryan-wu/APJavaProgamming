@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<settings settings_version="1.0">
+<sites>
+<site siteurl="http://205.173.41.10/javasnarf/snarf.xml"/>
+<site siteurl="http://205.173.41.10/apcssnarf/snarf.xml"/>
+</sites>
+<history>
+<install date="08.20.2015.10.35.58" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh02_Hello" name="JMCh02_Hello" publisher="gkp" version="1.0"/>
+<install date="08.20.2015.10.36.26" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh02Exer" name="JMCh02Exer" publisher="gkp" version="1.0"/>
+<install date="08.24.2015.03.29.06" location="C:\Users\Bryan\Dropbox\workspaceAPCS\JMCh02Exer" name="JMCh02Exer" publisher="gkp" version="1.0"/>
+<install date="08.26.2015.07.14.44" location="C:\Users\Bryan\Dropbox\workspaceAPCS\JMCh03Ex11_Book" name="JMCh03Ex11_Book" publisher="gkp" version="1.0"/>
+<install date="08.26.2015.07.36.41" location="C:\Users\Bryan\Dropbox\workspaceAPCS\JMCh03Ex12_Cylinder" name="JMCh03Ex12_Cylinder" publisher="gkp" version="1.0"/>
+<install date="08.27.2015.09.28.35" location="C:\Users\bwu623\Dropbox\workspaceAPCS\APCSElevensActivity1" name="APCSElevensActivity1" publisher="gkp" version="1.0"/>
+<install date="08.28.2015.09.47.24" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh05_MovingDisk" name="JMCh05_MovingDisk" publisher="gkp" version="1.0"/>
+<install date="09.03.2015.09.18.04" location="C:\Users\bwu623\Dropbox\workspaceAPCS\A3_1Easter" name="A3_1Easter" publisher="gkp" version="1.1"/>
+<install date="09.03.2015.09.45.33" location="C:\Users\bwu623\Dropbox\workspaceAPCS\A3_2Coins" name="A3_2Coins" publisher="gkp" version="1.0"/>
+<install date="09.03.2015.10.02.06" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh06_10PieChart" name="JMCh06_10PieChart" publisher="gkp" version="1.1"/>
+<install date="09.08.2015.10.32.41" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh07_RollingDice" name="JMCh07_RollingDice" publisher="gkp" version="1.1"/>
+<install date="09.15.2015.09.52.09" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh04Ex16_Ornament" name="JMCh04Ex16_Ornament" publisher="gkp" version="1.1"/>
+<install date="09.18.2015.10.32.15" location="C:\Users\bwu623\Dropbox\workspaceAPCS\A12_6ParallelLines" name="A12_6ParallelLines" publisher="gkp" version="1.1"/>
+<install date="09.18.2015.10.32.41" location="C:\Users\bwu623\Dropbox\workspaceAPCS\A12_1FunLoops" name="A12_1FunLoops" publisher="gkp" version="1.1"/>
+<install date="09.22.2015.10.29.14" location="C:\Users\bwu623\Dropbox\workspaceAPCS\A12_6ParallelLines" name="A12_6ParallelLines" publisher="gkp" version="1.1"/>
+<install date="09.24.2015.10.39.50" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh08_PerfectNumbers" name="JMCh08_PerfectNumbers" publisher="gkp" version="1.0"/>
+<install date="09.28.2015.09.56.31" location="C:\Users\Bryan\Dropbox\workspaceAPCS\JMCh09_SnackBar" name="JMCh09_SnackBar" publisher="gkp" version="1.2"/>
+<install date="10.01.2015.09.16.04" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh09Ex17_Complex" name="JMCh09Ex17_Complex" publisher="gkp" version="1.0"/>
+<install date="10.05.2015.09.34.27" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh10_Lipogrammer" name="JMCh10_Lipogrammer" publisher="gkp" version="1.2"/>
+<install date="10.09.2015.09.49.42" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh10Exercises" name="JMCh10Exercises" publisher="gkp" version="1.0"/>
+<install date="10.10.2015.11.39.04" location="C:\Users\Bryan\Dropbox\workspaceAPCS\A11_1BackToSchool" name="A11_1BackToSchool" publisher="gkp" version="1.0"/>
+<install date="10.15.2015.10.39.04" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh11Ex8_Triangle" name="JMCh11Ex8_Triangle" publisher="gkp" version="1.5"/>
+<install date="10.15.2015.11.41.54" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh10_PigLatinator" name="JMCh10_PigLatinator" publisher="gkp" version="1.4"/>
+<install date="10.16.2015.10.35.33" location="C:\Users\bwu623\Dropbox\workspaceAPCS\A11_3Checker" name="A11_3Checker" publisher="gkp" version="1.1"/>
+<install date="10.20.2015.10.12.05" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh12_3FortuneTeller" name="JMCh12_3FortuneTeller" publisher="gkp" version="1.2"/>
+<install date="10.20.2015.10.19.55" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh12_3FortuneTeller" name="JMCh12_3FortuneTeller" publisher="gkp" version="1.2"/>
+<install date="10.20.2015.10.31.44" location="C:\Users\bwu623\Dropbox\workspaceAPCS\A29_1OldMacDonald" name="A29_1OldMacDonald" publisher="gkp" version="1.1"/>
+<install date="10.22.2015.09.59.04" location="C:\Users\bwu623\Dropbox\workspaceAPCS\A16_Statistics" name="A16_Statistics" publisher="gkp" version="1.0"/>
+<install date="10.23.2015.10.22.11" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh12_11Chomp" name="JMCh12_11Chomp" publisher="gkp" version="1.0"/>
+<install date="10.29.2015.10.28.14" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh12_Exercises" name="JMCh12_Exercises" publisher="gkp" version="1.2"/>
+<install date="11.05.2015.09.16.57" location="C:\Users\bwu623\Dropbox\workspaceAPCS\A15_1IrregularPolygon" name="A15_1IrregularPolygon" publisher="gkp" version="1.0"/>
+<install date="11.05.2015.10.34.02" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh12_9IndexMaker" name="JMCh12_9IndexMaker" publisher="gkp" version="1.2"/>
+<install date="11.11.2015.08.40.45" location="C:\Users\Bryan\Dropbox\workspaceAPCS\KnightCritterTour" name="KnightCritterTour" publisher="gkp" version="1.3"/>
+<install date="11.12.2015.09.16.19" location="C:\Users\bwu623\Dropbox\workspaceAPCS\AB24EraseObject" name="AB24EraseObject" publisher="gkp" version="1.1"/>
+<install date="11.13.2015.09.52.31" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh14_DictionaryMaker" name="JMCh14_DictionaryMaker" publisher="gkp" version="1.5"/>
+<install date="11.17.2015.10.32.46" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh13_4KeepingThingsInOrder" name="JMCh13_4KeepingThingsInOrder" publisher="gkp" version="1.2"/>
+<install date="11.20.2015.09.48.50" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh13_9BenchmarksSC" name="JMCh13_9BenchmarksSC" publisher="gkp" version="1.1"/>
+<install date="12.01.2015.10.34.03" location="C:\Users\bwu623\Dropbox\workspaceAPCS\AB27_2MergeList" name="AB27_2MergeList" publisher="gkp" version="1.2"/>
+<install date="12.08.2015.10.25.43" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh20_4Lists" name="JMCh20_4Lists" publisher="gkp" version="1.3"/>
+<install date="12.08.2015.10.25.49" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh20_5LinkedListWithTail" name="JMCh20_5LinkedListWithTail" publisher="gkp" version="1.0"/>
+<install date="12.08.2015.10.26.00" location="C:\Users\bwu623\Dropbox\workspaceAPCS\AB24ThreadTheMazeText" name="AB24ThreadTheMazeText" publisher="gkp" version="1.0"/>
+<install date="12.08.2015.10.26.02" location="C:\Users\bwu623\Dropbox\workspaceAPCS\AB24ThreadTheMazeGraphic" name="AB24ThreadTheMazeGraphic" publisher="gkp" version="1.1"/>
+<install date="12.29.2015.09.11.22" location="C:\Users\Bryan\Dropbox\workspaceAPCS\JMCh20_7Teletext" name="JMCh20_7Teletext" publisher="gkp" version="1.2"/>
+<install date="01.04.2016.09.28.43" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh20Exercises" name="JMCh20Exercises" publisher="gkp" version="1.0"/>
+<install date="01.12.2016.09.47.55" location="C:\Users\bwu623\Dropbox\workspaceAPCS\ASCIIArt" name="ASCIIArt" publisher="gkp" version="1.0"/>
+<install date="01.12.2016.09.50.38" location="C:\Users\bwu623\Dropbox\workspaceAPCS\AB31_3RPN" name="AB31_3RPN" publisher="gkp" version="1.0"/>
+<install date="01.14.2016.09.49.45" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh21_3Browsing" name="JMCh21_3Browsing" publisher="gkp" version="1.4"/>
+<install date="01.19.2016.09.59.07" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh21_6ActorsWorld" name="JMCh21_6ActorsWorld" publisher="gkp" version="1.2"/>
+<install date="01.21.2016.10.41.08" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh22_6Hex" name="JMCh22_6Hex" publisher="gkp" version="1.2"/>
+<install date="01.26.2016.09.48.23" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh23_5BST" name="JMCh23_5BST" publisher="gkp" version="1.2"/>
+<install date="02.01.2016.09.22.58" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh23_6MorseCode" name="JMCh23_6MorseCode" publisher="gkp" version="1.2"/>
+<install date="02.01.2016.09.23.04" location="C:\Users\bwu623\Dropbox\workspaceAPCS\AB30_3BST" name="AB30_3BST" publisher="gkp" version="1.0"/>
+<install date="02.05.2016.09.13.28" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh24_3Cryptogram" name="JMCh24_3Cryptogram" publisher="gkp" version="1.2"/>
+<install date="02.12.2016.09.51.19" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh24_6Giggle" name="JMCh24_6Giggle" publisher="gkp" version="1.3"/>
+<install date="02.25.2016.09.43.28" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh25_4Heap" name="JMCh25_4Heap" publisher="gkp" version="1.2"/>
+<install date="02.25.2016.09.50.56" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh24Exercises" name="JMCh24Exercises" publisher="gkp" version="1.1"/>
+<install date="02.29.2016.09.35.47" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh25_5Heapsort" name="JMCh25_5Heapsort" publisher="gkp" version="1.2"/>
+<install date="03.09.2016.09.28.35" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh25Exercises" name="JMCh25Exercises" publisher="gkp" version="1.1"/>
+<install date="03.15.2016.09.57.03" location="C:\Users\bwu623\Dropbox\workspaceAPCS\JMCh19_SafeTrade" name="JMCh19_SafeTrade" publisher="gkp" version="1.5"/>
+<install date="04.01.2016.10.29.37" location="C:\Users\bwu623\Dropbox\workspaceAPCS\A21_1Numbers" name="A21_1Numbers" publisher="gkp" version="1.2"/>
+<install date="04.06.2016.01.14.43" location="C:\Users\bwu623\Dropbox\workspaceAPCS\APCSPixLab" name="APCSPixLab" publisher="gkp" version="1.1"/>
+<install date="04.22.2016.09.52.25" location="C:\Users\bwu623\Dropbox\workspaceAPCS\ABFR_Quilt" name="ABFR_Quilt" publisher="gkp" version="1.0"/>
+</history>
+</settings>

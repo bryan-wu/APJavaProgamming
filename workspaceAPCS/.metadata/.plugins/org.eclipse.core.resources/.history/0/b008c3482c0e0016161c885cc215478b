@@ -1,0 +1,114 @@
+package zMine;
+
+public class Character
+{
+    // X/Y param
+    // speed
+    // x/y vel
+    // health param
+
+    // takeHit()
+    // checkHealth()
+
+    private double x;
+
+    private double y;
+
+    private double vX; // x velocity
+
+    private double vY;// y velocity
+
+    private int hp; // health points
+
+    private World w;
+
+
+    /**
+     * @param x
+     *            x position
+     * @param y
+     *            y position
+     * @param velX
+     *            velocity x
+     * @param velY
+     *            velocity y
+     * @param hitPoints
+     *            hitPoints
+     * @param world
+     *            World
+     */
+    public Character( double x, double y, double velX, double velY, int hitPoints, World world )
+    {
+        this.x = x;
+        this.y = y;
+        vX = velX;
+        vY = velY;
+        hp = hitPoints;
+        w = world;
+    }
+
+
+    /**
+     * TODO Write your method description here.
+     * 
+     * @return
+     */
+    public boolean alive()
+    {
+        return hp > 0;
+    }
+
+
+    /**
+     * TODO Write your method description here.
+     * 
+     * @param damage
+     *            damage taken
+     * @return
+     */
+    public void takeHit( int damage )
+    {
+        hp -= damage;
+    }
+
+
+    public void tick()
+    {
+        x = x + vX * speed * tick / 1000;
+    }
+
+
+    // getters
+    /**
+     * Return the value of hp for this player.
+     * 
+     * @return
+     */
+    public int getHP()
+    {
+        return hp;
+    }
+
+
+    /**
+     * Returns the value of velocity along the x axis.
+     * 
+     * @return velocity x
+     */
+    public double getVX()
+    {
+        return vX;
+    }
+
+
+    /**
+     * Returns the value of velocity along the y axis.
+     * 
+     * @return velocity y
+     */
+    public double getVY()
+    {
+        return vY;
+    }
+
+}

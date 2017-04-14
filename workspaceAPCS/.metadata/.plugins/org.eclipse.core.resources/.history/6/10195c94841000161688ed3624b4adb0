@@ -1,0 +1,23 @@
+package zMine;
+
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.Timer;
+
+
+public class TrapTile extends Tile
+{
+
+    /**
+     * @param c
+     *            color of tile
+     */
+    public TrapTile()
+    {
+        super( Color.RED, false, true );
+    }
+
+}

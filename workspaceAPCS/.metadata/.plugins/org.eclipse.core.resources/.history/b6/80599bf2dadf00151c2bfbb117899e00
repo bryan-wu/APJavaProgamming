@@ -1,0 +1,173 @@
+import java.util.*;
+
+
+/**
+ * As the main objective of the lab is to learn about heaps, it would not be a
+ * bad guess that you will have implement one. The heap you are to implement is
+ * a min-heap of Comparables. Your are provided with the majority of a
+ * "Do-it-Yourself" priority queue as described in Section 25.4 of Java Methods.
+ * The code for the class is provided in HeapPriorityQueue.java. It is your
+ * responsibility to supply the missing code for reheapUp, reheapDown and
+ * toString. Since Student implements the Comparable interface, you will be able
+ * to use this class for sorting your students.
+ *
+ * @author Bryan Wu
+ * @version Mar 1, 2016
+ * @author Period: 3
+ * @author Assignment: JMCh25_4Heap
+ *
+ * @author Sources: None
+ */
+public class HeapPriorityQueue
+{
+    private static final int DFLT_CAPACITY = 101;
+
+    private Object[] items;
+
+    private int numItems;
+
+    private final Comparator<Object> comparator;
+
+
+    public HeapPriorityQueue()
+    {
+        this( DFLT_CAPACITY, null );
+    }
+
+
+    public HeapPriorityQueue( Comparator<Object> c )
+    {
+        this( DFLT_CAPACITY, c );
+    }
+
+
+    public HeapPriorityQueue( int initialCapacity )
+    {
+        this( initialCapacity, null );
+    }
+
+
+    public HeapPriorityQueue( int initialCapacity, Comparator<Object> c )
+    {
+        items = new Object[initialCapacity + 1];
+        comparator = c;
+    }
+
+
+    /**
+     * Returns true if this priority queue is empty; otherwise returns false.
+     */
+    public boolean isEmpty()
+    {
+        return numItems == 0;
+    }
+
+
+    /**
+     * Returns the highest priority element without removing it from this
+     * priority queue.
+     */
+    public Object peek()
+    {
+        if ( numItems == 0 )
+        {
+            throw new NoSuchElementException();
+        }
+        return items[1];
+    }
+
+
+    /**
+     * Adds obj to this priority queue; returns true.
+     */
+    public boolean add( Object obj )
+    {
+        numItems++;
+        if ( numItems >= items.length ) // items[0] is not used
+            growCapacity();
+        items[numItems] = obj;
+        reheapUp();
+        return true;
+    }
+
+
+    /**
+     * Removes and returns the highest priority item.
+     */
+    public Object remove()
+    {
+        if ( numItems == 0 )
+        {
+            throw new NoSuchElementException();
+        }
+
+        Object minObject = items[1];
+        items[1] = items[numItems];
+        numItems--;
+        reheapDown();
+        return minObject;
+    }
+
+
+    // **************************************************************************
+
+    private boolean lessThan( Object obj1, Object obj2 )
+    {
+        if ( comparator != null )
+        {
+            return comparator.compare( obj1, obj2 ) < 0;
+        }
+        else
+        {
+            return ( (Comparable)obj1 ).compareTo( obj2 ) < 0;
+        }
+    }
+
+
+    public void reheapDown()
+    {
+        // while (items[i]!=null)
+
+        for ( int i = 1; i <= numItems; 2*i )
+        {
+            Object root = items[i];
+            Object temp = root;
+            Object leftChild = items[2 * i];
+            Object rightChild = items[2 * i + 1];
+            if ( lessThan( leftChild, rightChild ) && lessThan( leftChild, root ) )
+            {
+                root = leftChild;
+            }
+            if ( lessThan( rightChild, leftChild ) && lessThan( rightChild, root ) )
+            {
+                root = rightChild;
+            }
+        }
+    }
+
+
+    public void reheapUp()
+    {
+        // TODO complete method
+    }
+
+
+    private void growCapacity()
+    {
+        Object[] tempItems = new Object[2 * items.length - 1];
+        System.arraycopy( items, 0, tempItems, 0, items.length );
+        items = tempItems;
+    }
+
+
+    /**
+     * returns the String containing all the elements in level order
+     * 
+     * @return the String containing all the elements in level order
+     */
+    public String toString()
+    {
+        // TODO complete method
+        return null; // Fix This!!!
+    }
+}

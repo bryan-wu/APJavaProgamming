@@ -1,0 +1,32 @@
+package zMine;
+
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.Timer;
+
+
+public class GoldTile extends Tile
+{
+
+    private boolean gold;
+
+
+    /**
+     * @param c
+     *            color of tile
+     */
+    public GoldTile( Color c )
+    {
+        super( c, true, false );
+        gold = true;
+    }
+
+
+    public int giveGold()
+    {
+        return 0; // TODO
+    }
+}

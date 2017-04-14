@@ -1,0 +1,25 @@
+package zMine;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.Timer;
+
+
+public class Tile
+{
+    /**
+     * @param x
+     *            is the width of the world
+     * @param y
+     *            is the height of the world
+     * @param players
+     *            number of
+     */
+    public Tile( int x, int y )
+    {
+     
+    }
+
+}

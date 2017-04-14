@@ -1,0 +1,76 @@
+import java.awt.Color;
+import java.awt.geom.*;
+import java.util.*;
+import gpdraw.*;
+
+
+/**
+ * The program should use the Drawing Tool to draw the polygon by joining
+ * adjacent points with a line segment, and then closing it up by joining the
+ * end and start points.
+ *
+ * @author Bryan Wu
+ * @version Nov 5, 2015
+ * @author Period: 3
+ * @author Assignment: A15_1IrregularPolygon
+ *
+ * @author Sources: None
+ */
+public class IrregularPolygon
+{
+    private DrawingTool pen = new DrawingTool( new SketchPad( 300, 300, 0 ) );
+
+    private ArrayList<Point2D.Double> myPolygon;
+
+
+    // constuctors
+
+    /**
+     * Irregular Polygon constructor.
+     */
+    public IrregularPolygon()
+    {
+        myPolygon = new ArrayList<Point2D.Double>();
+    }
+
+
+    // public methods
+    /**
+     * This method adds a Point2D point.
+     * 
+     * @param aPoint
+     *            aPoint
+     */
+    public void add( Point2D.Double aPoint )
+    {
+        myPolygon.add( aPoint );
+    }
+
+
+    /**
+     * TODO Write your method description here.
+     * 
+     * @return
+     */
+    public double perimeter()
+    {
+        double perimeter = 0;
+        for ( int i = 1; i < myPolygon.size(); i++ )
+        {
+            perimeter += myPolygon.get( i ).distance( i - 1 );
+        }
+        return perimeter;
+    }
+
+
+    public double area()
+    {
+        return 0.0; // fix this!
+    }
+
+
+    public void draw()
+    {
+
+    }
+}

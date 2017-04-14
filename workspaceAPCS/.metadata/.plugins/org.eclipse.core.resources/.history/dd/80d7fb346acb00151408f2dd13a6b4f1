@@ -1,0 +1,254 @@
+import java.util.TreeMap;
+
+
+/**
+ * MorseCode TreeMap and TreeNode implementation.
+ *
+ * @author Bryan Wu
+ * @version Feb 1, 2016
+ * @author Period: 3
+ * @author Assignment: JMCh23_6MorseCode
+ *
+ * @author Sources: None
+ */
+public class MorseCode
+{
+    private static final char DOT = '.';
+
+    private static final char DASH = '-';
+
+    private static TreeMap<Character, String> codeMap;
+
+    private static TreeNode<Character> decodeTree;
+
+
+    /**
+     * Start!
+     */
+    public static void start()
+    {
+        codeMap = new TreeMap<Character, String>();
+
+        // put a space in the root of the decoding tree
+        decodeTree = new TreeNode<Character>( ' ', null, null ); // autoboxing
+
+        addSymbol( 'A', ".-" );
+        addSymbol( 'B', "-..." );
+        addSymbol( 'C', "-.-." );
+        addSymbol( 'D', "-.." );
+        addSymbol( 'E', "." );
+        addSymbol( 'F', "..-." );
+        addSymbol( 'G', "--." );
+        addSymbol( 'H', "...." );
+        addSymbol( 'I', ".." );
+        addSymbol( 'J', ".---" );
+        addSymbol( 'K', "-.-" );
+        addSymbol( 'L', ".-.." );
+        addSymbol( 'M', "--" );
+        addSymbol( 'N', "-." );
+        addSymbol( 'O', "---" );
+        addSymbol( 'P', ".--." );
+        addSymbol( 'Q', "--.-" );
+        addSymbol( 'R', ".-." );
+        addSymbol( 'S', "..." );
+        addSymbol( 'T', "-" );
+        addSymbol( 'U', "..-" );
+        addSymbol( 'V', "...-" );
+        addSymbol( 'W', ".--" );
+        addSymbol( 'X', "-..-" );
+        addSymbol( 'Y', "-.--" );
+        addSymbol( 'Z', "--.." );
+        addSymbol( '0', "-----" );
+        addSymbol( '1', ".----" );
+        addSymbol( '2', "..---" );
+        addSymbol( '3', "...--" );
+        addSymbol( '4', "....-" );
+        addSymbol( '5', "....." );
+        addSymbol( '6', "-...." );
+        addSymbol( '7', "--..." );
+        addSymbol( '8', "---.." );
+        addSymbol( '9', "----." );
+        addSymbol( '.', ".-.-.-" );
+        addSymbol( ',', "--..--" );
+        addSymbol( '?', "..--.." );
+    }
+
+
+    /**
+     * Inserts a letter and its Morse code string into the encoding map and
+     * calls treeInsert to insert them into the decoding tree.
+     * 
+     * @param letter
+     *            letter
+     * @param code
+     *            code
+     */
+    private static void addSymbol( char letter, String code )
+    {
+        codeMap.put( letter, code );
+        // use treeInsert to insert into decoding tree
+        treeInsert( letter, code );
+    }
+
+
+    /**
+     * Inserts a letter and its Morse code string into the decoding tree. Each
+     * dot-dash string corresponds to a path in the tree from the root to a
+     * node: at a "dot" go left, at a "dash" go right. The node at the end of
+     * the path holds the symbol for that code string.
+     * 
+     * @param letter
+     *            letter code
+     * @param code
+     *            code
+     */
+    private static void treeInsert( char letter, String code )
+    {
+        TreeNode<Character> newNode = new TreeNode<Character>( letter, null, null );
+        TreeNode<Character> tempNode = decodeTree;
+        char[] codes = code.toCharArray();
+        for ( char c : codes )
+        {
+            if ( c == DOT )
+            {
+                if ( tempNode.getLeft() != null )
+                {
+                    tempNode = tempNode.getLeft();
+                }
+                else
+                {
+                    tempNode.setLeft( newNode );
+                }
+            }
+            if ( c == DASH )
+            {
+                if ( tempNode.getRight() != null )
+                {
+                    tempNode = tempNode.getRight();
+                }
+                else
+                {
+                    tempNode.setRight( newNode );
+                }
+            }
+        }
+    }
+
+
+    /**
+     * Converts text into a Morse code message. Adds a space after a dot-dash
+     * sequence for each letter. Other spaces in the text are transferred
+     * directly into the encoded message.
+     * 
+     * @param text
+     *            text
+     * @return encode message
+     */
+    public static String encode( String text )
+    {
+        StringBuffer morse = new StringBuffer( 400 );
+        char letters[] = text.toCharArray();
+        int index = 0;
+        for ( char c : letters )
+        {
+            if ( c == ' ' )
+            {
+                morse.append( ' ' );
+            }
+            else
+            {
+                morse.append( codeMap.get( c ) );
+                if ( index != letters.length - 1 )
+                {
+                    morse.append( ' ' );
+                }
+            }
+            index++;
+        }
+        return morse.toString();
+    }
+
+
+    /**
+     * Converts a Morse code message into a text string. Assumes that dot-dash
+     * sequences for each letter are separated by one space. Additional spaces
+     * are transferred directly into text.
+     * 
+     * @param morse
+     *            morse
+     * @return the plain text message.
+     */
+    public static String decode( String morse )
+    {
+        StringBuffer text = new StringBuffer( 100 );
+        char sequences[] = morse.toCharArray();
+
+        for ( int i = 0; i < morse.length(); i++ )
+        {
+            if ( sequences[i] == ' ' )
+            {
+
+            }
+        }
+        int index = 0;
+        for ( char c : sequences )
+        {
+            String str = "";
+            if ( c == ' ' || index + 1 < morse.length() )
+            {
+                str = morse.substring( 0, index );
+                char sequenceSet[] = str.toCharArray();
+                morse = morse.substring( index + 1 );
+                index = 0;
+                TreeNode<Character> tempNode = decodeTree;
+                for ( char ch : sequenceSet )
+                {
+                    if ( ch == DOT )
+                    {
+                        if ( tempNode.getLeft() != null )
+                        {
+                            tempNode = tempNode.getLeft();
+                        }
+                    }
+                    if ( ch == DASH )
+                    {
+                        if ( tempNode.getRight() != null )
+                        {
+                            tempNode = tempNode.getRight();
+                        }
+                    }
+                }
+                text.append( tempNode.getValue() );
+                text.append( ' ' );
+            }
+            index++;
+        }
+
+        return text.toString();
+    }
+
+
+    // --------------------------------------------------------------------
+    // For test purposes only. Not to be used in completing the assignment
+
+    /**
+     * Return codeMap.
+     * 
+     * @return codeMap
+     */
+    protected TreeMap<Character, String> getCodeMap()
+    {
+        return codeMap;
+    }
+
+
+    /**
+     * Return decodeTree.
+     * 
+     * @return decodeTree
+     */
+    protected TreeNode<Character> getDecodeTree()
+    {
+        return decodeTree;
+    }
+}

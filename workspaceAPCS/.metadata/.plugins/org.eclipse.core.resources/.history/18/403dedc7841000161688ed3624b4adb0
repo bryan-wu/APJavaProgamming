@@ -1,0 +1,45 @@
+package zMine;
+
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.Timer;
+
+
+/**
+ * The basic tile class of the game.
+ *
+ * @author Bryan Wu
+ * @version Jan 26, 2016
+ * @author Period: 3
+ * @author Assignment: JMCh23_5BST
+ *
+ * @author Sources: None
+ */
+public class Tile
+{
+
+    private Color color;
+
+    private boolean destroyable;
+
+    private boolean passable;
+
+
+    /**
+     * @param c
+     *            tile color
+     * @param des
+     *            destroyable boolean
+     * @param pass
+     *            passable boolean
+     */
+    public Tile( Color c, boolean des, boolean pass )
+    {
+        color = c;
+        destroyable = des;
+        passable = pass;
+    }
+}

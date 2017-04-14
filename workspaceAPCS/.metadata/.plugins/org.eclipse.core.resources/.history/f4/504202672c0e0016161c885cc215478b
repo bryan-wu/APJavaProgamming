@@ -1,0 +1,55 @@
+package zMine;
+
+public class Enemy extends Character
+{
+    // X/Y param
+    // speed
+    // x/y vel
+    // health param
+
+    // takeHit()
+    // checkHealth()
+
+    private double vX; // x velocity
+
+    private double vY;// y velocity
+
+    private int hp; // health points
+
+    private World w;
+
+
+    /**
+     * @param x
+     *            x velocity
+     * @param y
+     *            y velocity
+     * @param hitPoints
+     *            hitPoints
+     * @param world
+     *            World
+     */
+    public Enemy( double x, double y, int hitPoints, World world )
+    {
+        super( x, y, hitPoints, world );
+    }
+
+
+    /**
+     * TODO Write your method description here.
+     * 
+     * @param damage
+     *            damage taken
+     * @return
+     */
+    public void takeHit( int damage )
+    {
+        super.takeHit( damage );
+        if ( !alive() )
+        {
+            // tell World that Player is dead
+            w.playerDeath( this );
+        }
+    }
+
+}

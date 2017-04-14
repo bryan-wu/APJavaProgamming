@@ -1,0 +1,117 @@
+import java.awt.Color;
+import java.awt.geom.*;
+import java.util.*;
+import gpdraw.*;
+
+
+/**
+ * The program should use the Drawing Tool to draw the polygon by joining
+ * adjacent points with a line segment, and then closing it up by joining the
+ * end and start points.
+ *
+ * @author Bryan Wu
+ * @version Nov 5, 2015
+ * @author Period: 3
+ * @author Assignment: A15_1IrregularPolygon
+ *
+ * @author Sources: None
+ */
+public class IrregularPolygon
+{
+    private DrawingTool pen = new DrawingTool( new SketchPad( 300, 300, 0 ) );
+
+    private ArrayList<Point2D.Double> myPolygon;
+
+
+    // constuctors
+
+    /**
+     * Irregular Polygon constructor.
+     */
+    public IrregularPolygon()
+    {
+        myPolygon = new ArrayList<Point2D.Double>(1);
+    }
+
+
+    // public methods
+    /**
+     * This method adds a Point2D point.
+     * 
+     * @param aPoint
+     *            aPoint
+     */
+    public void add( Point2D.Double aPoint )
+    {
+        myPolygon.add( aPoint );
+    }
+
+
+    /**
+     * This method returns the perimeter of the polygon,
+     * 
+     * @return perimeter perimeter of polygon
+     */
+    public double perimeter()
+    {
+        double perimeter = 0;
+        for ( int i = 1; i < myPolygon.size(); i++ )
+        {
+            perimeter += myPolygon.get( i ).distance( myPolygon.get( i - 1 ) );
+        }
+        return perimeter;
+    }
+
+
+    /**
+     * This method returns the area of the polygon.
+     * 
+     * @return area area of polygon
+     */
+    public double area()
+    {
+        double area = 0;
+
+        for ( int i = 0; i < myPolygon.size(); i++ )
+        {
+            if ( i + 1 < myPolygon.size() )
+            {
+                area += myPolygon.get( i ).getX() * myPolygon.get( i + 1 ).getY();
+            }
+            else
+            {
+                area += myPolygon.get( i ).getX() * myPolygon.get( 0 ).getY();
+            }
+        }
+
+        for ( int i = 0; i < myPolygon.size(); i++ )
+        {
+            if ( i + 1 < myPolygon.size() )
+            {
+                area -= myPolygon.get( i ).getY() * myPolygon.get( i + 1 ).getX();
+            }
+            else
+            {
+                area -= myPolygon.get( i ).getY() * myPolygon.get( 0 ).getX();
+            }
+        }
+
+        return area;
+    }
+
+
+    /**
+     * This method draws the polygon.
+     */
+    public void draw()
+    {
+        pen.up();
+        pen.move( myPolygon.get( 0 ).getX(), myPolygon.get( 0 ).getY() );
+        pen.down();
+        for ( int i = 1; i < myPolygon.size(); i++ )
+        {
+            pen.move( myPolygon.get( i ).getX(), myPolygon.get( i ).getY() );
+        }
+        pen.move( myPolygon.get( 0 ).getX(), myPolygon.get( 0 ).getY() );
+    }
+}

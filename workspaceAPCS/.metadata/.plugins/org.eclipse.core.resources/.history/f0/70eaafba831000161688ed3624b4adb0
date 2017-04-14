@@ -1,0 +1,27 @@
+package zMine;
+
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.Timer;
+
+
+public class Tile
+{
+
+    private Color color;
+    private boolean destroyable;
+    
+
+
+    /**
+     * @param c
+     *            color of tile
+     */
+    public Tile( Color c )
+    {
+        color = c;
+    }
+}

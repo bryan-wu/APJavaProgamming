@@ -1,0 +1,29 @@
+package zMine;
+
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.Timer;
+
+
+public class Tile
+{
+    private int row;
+
+    private int col;
+
+    private Color color;
+
+
+    /**
+     * @param players
+     *            number of
+     */
+    public Tile( Color c )
+    {
+        color = c;
+    }
+
+}
